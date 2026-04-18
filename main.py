@@ -25,7 +25,7 @@ df = load_data()
 
 # --- 4. UI CHECK ---
 if df is None:
-    st.error("❌ 'expenses.csv' not found in the 'data/' folder!")
+    st.error(" 'expenses.csv' not found in the 'data/' folder!")
     st.info("Please run `python create_csv.py` first to generate your dataset.")
 else:
     # --- SIDEBAR FILTERS ---
@@ -46,7 +46,7 @@ else:
     ]
 
     # --- MAIN DASHBOARD UI ---
-    st.title("📊 FinTrack: Personal Finance Dashboard")
+    st.title(" FinTrack: Personal Finance Dashboard")
     st.markdown(f"**Analysis Period:** {min(df['Date'])} to {max(df['Date'])}")
     st.divider()
 
@@ -91,7 +91,7 @@ else:
 
     # --- AUTOMATED EXPORT LOGIC ---
     st.sidebar.divider()
-    if st.sidebar.button("💾 Save Charts to 'outputs/'"):
+    if st.sidebar.button("Save Charts to 'outputs/'"):
         if not os.path.exists('outputs'):
             os.makedirs('outputs')
         
@@ -105,7 +105,7 @@ else:
 
     # --- DATA TABLE ---
     st.divider()
-    with st.expander("🔍 View Filtered Transaction History"):
+    with st.expander(" View Filtered Transaction History"):
         # Drop the sorting helper column before displaying to user
         display_df = filtered_df.drop(columns=['Month_Sort'])
         st.dataframe(display_df, use_container_width=True)
