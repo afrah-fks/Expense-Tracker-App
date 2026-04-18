@@ -1,0 +1,33 @@
+# --- Python Environments ---
+venv/
+env/
+.venv/
+bin/
+include/
+lib/
+share/
+pyvenv.cfg
+
+# --- Python Caches & Compiled Files ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- Streamlit Specific ---
+.streamlit/
+static/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Data & Secrets ---
+# (Optional) Uncomment the next line if you want to keep your CSV private
+# data/*.csv
+
+# --- Large Output Files ---
+# Ignore large log files or temporary system files
+*.log
